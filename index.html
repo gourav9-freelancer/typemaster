@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Typing Speed Test Online – Free WPM Test | TypeForge</title>
+  <meta name="description" content="Take a free typing speed test online. Check your WPM (words per minute), accuracy, and errors. No signup required. Instant results. Improve your typing skills today!">
+  <meta name="keywords" content="typing speed test, typing test online, free typing test, wpm test, words per minute test, keyboard speed test, typing accuracy test, improve typing speed">
+  <meta name="author" content="TypeForge">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://typeforge.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Free Typing Speed Test – Check Your WPM | TypeForge">
+  <meta property="og:description" content="Measure your typing speed in WPM. Free, instant, no login required. Get detailed stats and improve your typing skills.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://typeforge.io/">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "TypeForge Typing Speed Test",
+    "description": "Free online typing speed test. Check your WPM, accuracy, and improve typing skills.",
+    "url": "https://typeforge.io",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon inline -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text y='.9em' font-size='75' x='12'>⌨</text></svg>">
+</head>
+
+<body>
+
+  <!-- Background Glow -->
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║             NAVBAR                   ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="/" class="logo" aria-label="TypeForge Home">
+        <div class="logo__icon" aria-hidden="true">⌨️</div>
+        <div class="logo__text">Type<span>Forge</span></div>
+      </a>
+      <div class="navbar__actions">
+        <a href="#seo-section" class="nav-link">About</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║        HEADER AD SLOT                ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <div class="container container--wide" style="padding-top: 16px;">
+    <div class="ad-slot ad-slot--header" role="complementary" aria-label="Advertisement">
+      <!-- Google AdSense: data-ad-slot goes here -->
+      <span>Advertisement</span>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║             HERO                     ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <header class="hero" role="banner">
+    <div class="container">
+      <div class="hero__badge fade-in" aria-hidden="true">
+        <span>⚡</span> Free · No Signup · Instant Results
+      </div>
+      <h1 class="hero__title fade-in-2">
+        <span class="grad">Typing Speed Test</span> Online
+      </h1>
+      <p class="hero__sub fade-in-3">
+        Check your <strong>WPM</strong>, accuracy, and errors in real time.
+        Improve your typing skills with every test — no account needed.
+      </p>
+
+      <!-- Controls -->
+      <div class="controls fade-in-4" role="group" aria-label="Test settings">
+
+        <!-- Time options -->
+        <div class="controls__group" role="group" aria-label="Time limit">
+          <span class="controls__label">⏱</span>
+          <button class="ctrl-btn" data-time="15" aria-label="15 seconds">15s</button>
+          <button class="ctrl-btn" data-time="30" aria-label="30 seconds">30s</button>
+          <button class="ctrl-btn active" data-time="60" aria-label="60 seconds">60s</button>
+          <button class="ctrl-btn" data-time="120" aria-label="2 minutes">2m</button>
+        </div>
+
+        <!-- Mode -->
+        <div class="controls__group" role="group" aria-label="Test mode">
+          <span class="controls__label">📝</span>
+          <button class="ctrl-btn active" data-mode="time" aria-label="Time mode">Time</button>
+          <button class="ctrl-btn" data-mode="paragraph" aria-label="Paragraph mode">Paragraph</button>
+        </div>
+
+        <!-- Difficulty -->
+        <div class="controls__group" role="group" aria-label="Difficulty level">
+          <span class="controls__label">🎯</span>
+          <button class="ctrl-btn" data-diff="easy" aria-label="Easy difficulty">Easy</button>
+          <button class="ctrl-btn active" data-diff="medium" aria-label="Medium difficulty">Medium</button>
+          <button class="ctrl-btn" data-diff="hard" aria-label="Hard difficulty">Hard</button>
+          <button class="ctrl-btn" data-diff="quotes" aria-label="Quotes mode">Quotes</button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║          TYPING SECTION              ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <main class="container" id="main-content">
+    <section aria-label="Typing test" id="typing-card" class="typing-card">
+
+      <!-- Hidden real input -->
+      <input
+        type="text"
+        id="typing-input"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        aria-label="Typing input"
+        tabindex="0"
+      >
+
+      <!-- Stats Bar -->
+      <div class="stats-bar" role="status" aria-live="polite" aria-label="Live statistics">
+        <div class="stat-item stat-item--timer" id="timer-item">
+          <div class="stat-item__value" id="timer-val">60</div>
+          <div class="stat-item__label">Seconds</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value highlight" id="wpm-val">0</div>
+          <div class="stat-item__label">WPM</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value" id="acc-val">100%</div>
+          <div class="stat-item__label">Accuracy</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value" id="err-val">0</div>
+          <div class="stat-item__label">Errors</div>
+        </div>
+      </div>
+
+      <!-- Progress Track -->
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <!-- Paragraph Display -->
+      <div
+        class="paragraph-display"
+        id="paragraph-display"
+        aria-label="Text to type"
+        role="textbox"
+        aria-readonly="true"
+      ></div>
+
+      <!-- Click to Focus Overlay -->
+      <div class="focus-overlay" id="focus-overlay" role="button" tabindex="0" aria-label="Click to start typing">
+        <div class="focus-overlay__icon" aria-hidden="true">⌨️</div>
+        <div class="focus-overlay__text">Click here to start typing</div>
+        <div class="focus-overlay__sub">or press any key</div>
+      </div>
+
+      <!-- Bottom Controls -->
+      <div class="typing-controls">
+        <div class="keyboard-hint">
+          <span class="kbd">Ctrl</span> + <span class="kbd">R</span>
+          <span>to reset</span>
+        </div>
+        <button class="btn btn--ghost btn--sm" data-action="reset" aria-label="Reset test">
+          ↺ Reset
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Content Ad (between sections) -->
+    <div class="ad-slot ad-slot--content" role="complementary" aria-label="Advertisement">
+      <span>Advertisement</span>
+    </div>
+
+  </main>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║           RESULT MODAL              ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <div class="modal-backdrop" id="result-modal" role="dialog" aria-modal="true" aria-label="Test results">
+    <div class="modal">
+      <div class="modal__header">
+        <span class="modal__emoji" id="modal-emoji" aria-hidden="true">🚀</span>
+        <h2 class="modal__title" id="modal-title">Well Done!</h2>
+        <p class="modal__subtitle" id="modal-sub">Here are your results</p>
+      </div>
+
+      <div class="result-grid" role="list">
+        <!-- WPM — full width -->
+        <div class="result-card result-card--accent" role="listitem">
+          <div class="result-card__value" id="res-wpm">0</div>
+          <div class="result-card__label">Words Per Minute</div>
+          <div class="result-card__sublabel">
+            <span class="speed-badge" id="speed-badge">Good</span>
+            &nbsp;
+            <span id="res-wpm-sub"></span>
+          </div>
+        </div>
+        <!-- Accuracy -->
+        <div class="result-card" role="listitem">
+          <div class="result-card__value" id="res-acc">100%</div>
+          <div class="result-card__label">Accuracy</div>
+        </div>
+        <!-- Errors -->
+        <div class="result-card" role="listitem">
+          <div class="result-card__value" id="res-err">0</div>
+          <div class="result-card__label">Errors</div>
+        </div>
+        <!-- Time -->
+        <div class="result-card" role="listitem">
+          <div class="result-card__value" id="res-time">60s</div>
+          <div class="result-card__label">Time Taken</div>
+        </div>
+      </div>
+
+      <div class="modal__actions">
+        <button class="btn" id="next-btn" aria-label="Try another test">
+          🔄 Try Again
+        </button>
+        <button class="btn btn--primary" data-action="reset" aria-label="Restart test">
+          ⚡ New Test
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║          SEO CONTENT SECTION         ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section class="seo-section" id="seo-section" aria-label="About typing speed">
+    <div class="container container--wide">
+
+      <h2 class="section-title">Everything About Typing Speed</h2>
+
+      <div class="content-grid">
+        <article class="content-card">
+          <div class="content-card__icon" aria-hidden="true">📊</div>
+          <h3 class="content-card__title">What is Typing Speed (WPM)?</h3>
+          <p class="content-card__text">
+            Typing speed is measured in <strong>Words Per Minute (WPM)</strong> — the number of correctly typed words in 60 seconds. One "word" is standardized as 5 characters, including spaces. This universal metric makes it easy to compare typing speed across different languages and keyboard layouts.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <div class="content-card__icon" aria-hidden="true">🎯</div>
+          <h3 class="content-card__title">What is a Good WPM Score?</h3>
+          <p class="content-card__text">
+            The average person types between <strong>38–40 WPM</strong>. Professional typists typically achieve 65–75 WPM. If you type 80+ WPM, you're in the top 10% globally. Accuracy matters just as much — a score of 95%+ is considered excellent. Balance speed with precision for real-world efficiency.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <div class="content-card__icon" aria-hidden="true">⚡</div>
+          <h3 class="content-card__title">How to Improve Typing Speed</h3>
+          <p class="content-card__text">
+            Practice daily for 15–20 minutes using a structured approach. Start with <strong>proper finger placement</strong> on the home row (ASDF JKL;). Focus on accuracy first — speed follows naturally. Use our difficulty levels to progressively challenge yourself. Most people see significant improvement within 2–4 weeks of consistent practice.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <div class="content-card__icon" aria-hidden="true">⌨️</div>
+          <h3 class="content-card__title">Touch Typing vs Hunt & Peck</h3>
+          <p class="content-card__text">
+            <strong>Touch typing</strong> — using all fingers without looking at the keyboard — allows speeds of 60–120+ WPM. The "hunt and peck" method (using 2 fingers) typically caps out around 30–40 WPM. Learning touch typing is one of the highest-ROI productivity skills you can develop as a knowledge worker.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <div class="content-card__icon" aria-hidden="true">🧠</div>
+          <h3 class="content-card__title">Why Accuracy Matters More Than Speed</h3>
+          <p class="content-card__text">
+            A typist at 80 WPM with 90% accuracy is <em>slower</em> than one at 65 WPM with 99% accuracy when accounting for corrections. Errors break your flow, cause re-reading, and slow overall output. Our test tracks both metrics so you can optimize the right balance for your goals.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <div class="content-card__icon" aria-hidden="true">🏆</div>
+          <h3 class="content-card__title">World Record Typing Speed</h3>
+          <p class="content-card__text">
+            The world record for fastest typing speed is held by Barbara Blackburn at an incredible <strong>212 WPM</strong>, using a Dvorak keyboard layout. The fastest speeds on QWERTY keyboards typically reach 150–170 WPM. Most competitive typists aim for 100+ WPM with near-perfect accuracy.
+          </p>
+        </article>
+      </div>
+
+      <!-- WPM Benchmark Table -->
+      <h2 class="section-title" id="wpm-table">WPM Speed Chart & Benchmarks</h2>
+      <table class="wpm-table" aria-label="WPM speed benchmarks">
+        <thead>
+          <tr>
+            <th>Speed (WPM)</th>
+            <th>Level</th>
+            <th>Description</th>
+            <th>Typical User</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>&lt; 20 WPM</strong></td>
+            <td>🌱 Beginner</td>
+            <td>Just starting out</td>
+            <td>New typists, seniors</td>
+          </tr>
+          <tr>
+            <td><strong>20–39 WPM</strong></td>
+            <td>📈 Below Average</td>
+            <td>Developing skill</td>
+            <td>Casual users, students</td>
+          </tr>
+          <tr>
+            <td><strong>40–59 WPM</strong></td>
+            <td>⚡ Average</td>
+            <td>Comfortable typing</td>
+            <td>Office workers, average adults</td>
+          </tr>
+          <tr>
+            <td><strong>60–79 WPM</strong></td>
+            <td>🔥 Good</td>
+            <td>Above average</td>
+            <td>Experienced users, writers</td>
+          </tr>
+          <tr>
+            <td><strong>80–99 WPM</strong></td>
+            <td>💎 Fast</td>
+            <td>Proficient typist</td>
+            <td>Secretaries, programmers</td>
+          </tr>
+          <tr>
+            <td><strong>100+ WPM</strong></td>
+            <td>🏆 Expert</td>
+            <td>Elite speed</td>
+            <td>Professional typists, top 1%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Ad between content -->
+      <div class="ad-slot" style="height:200px; margin-bottom: 48px;" role="complementary" aria-label="Advertisement">
+        <span>Advertisement</span>
+      </div>
+
+      <!-- FAQ Section -->
+      <h2 class="section-title" id="faq">Frequently Asked Questions</h2>
+      <div class="faq-list" role="list">
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            What is the average typing speed?
+            <div class="faq-toggle" aria-hidden="true">+</div>
+          </summary>
+          <div class="faq-answer">
+            The average typing speed for adults is around 40 WPM (words per minute). Students and younger users often type slightly faster, around 35–45 WPM, while experienced office workers typically reach 50–60 WPM. Professional transcriptionists and data entry specialists often achieve 80–100+ WPM.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            How is WPM calculated?
+            <div class="faq-toggle" aria-hidden="true">+</div>
+          </summary>
+          <div class="faq-answer">
+            WPM is calculated using the formula: <strong>(Total characters typed ÷ 5) ÷ Minutes elapsed</strong>. The number 5 represents the average word length in English. This is why TypeForge counts all correctly typed characters, not just complete words — giving you an accurate, fair measurement of your actual typing throughput.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            How long should I practice typing each day?
+            <div class="faq-toggle" aria-hidden="true">+</div>
+          </summary>
+          <div class="faq-answer">
+            For optimal improvement, aim for 15–20 minutes of focused practice daily. Consistency beats duration — 15 minutes every day is far more effective than 2 hours once a week. Most people see noticeable speed improvements within 2–4 weeks of regular practice. After 3 months of daily practice, many users double their initial typing speed.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Should I look at my keyboard while typing?
+            <div class="faq-toggle" aria-hidden="true">+</div>
+          </summary>
+          <div class="faq-answer">
+            Ideally, no. Touch typing — typing without looking at the keyboard — is the key to achieving high speeds. It might feel slow and frustrating at first, but the investment pays off enormously. Start slowly, focus on correct finger placement, and resist the urge to look down. Your muscle memory will develop with consistent practice.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Does keyboard type affect typing speed?
+            <div class="faq-toggle" aria-hidden="true">+</div>
+          </summary>
+          <div class="faq-answer">
+            Yes, but less than most people think. A comfortable keyboard with good key travel (mechanical keyboards are popular among fast typists) can help, but the biggest factor is technique and practice. Many world-record typists use standard membrane keyboards. Find a keyboard you're comfortable with and focus on building muscle memory.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            Is this typing test free?
+            <div class="faq-toggle" aria-hidden="true">+</div>
+          </summary>
+          <div class="faq-answer">
+            Yes, TypeForge is completely free to use. No signup, no account, no credit card required. Just open the page and start typing. Your results are shown instantly at the end of each test.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            What's the difference between WPM and CPM?
+            <div class="faq-toggle" aria-hidden="true">+</div>
+          </summary>
+          <div class="faq-answer">
+            CPM (Characters Per Minute) counts every individual character, while WPM groups characters into standardized 5-character "words." WPM = CPM ÷ 5. WPM is the more commonly used metric because it provides a standardized measurement that accounts for varying word lengths and makes comparisons between typists more meaningful.
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║              FOOTER                  ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <footer role="contentinfo">
+    <div class="footer__inner">
+      <div class="logo">
+        <div class="logo__icon" aria-hidden="true" style="width:28px;height:28px;font-size:14px;">⌨️</div>
+        <span class="logo__text" style="font-size:1rem;">Type<span>Forge</span></span>
+      </div>
+      <div class="footer__links">
+        <a href="#seo-section" class="footer__link">About</a>
+        <a href="#wpm-table" class="footer__link">WPM Guide</a>
+        <a href="#faq" class="footer__link">FAQ</a>
+      </div>
+      <div class="footer__copy">
+        &copy; 2025 TypeForge · Free Typing Speed Test Online
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+  <!-- Scripts -->
+  <script src="data/paragraphs.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
